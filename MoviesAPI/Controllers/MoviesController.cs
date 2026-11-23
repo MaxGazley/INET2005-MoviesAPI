@@ -66,11 +66,15 @@ namespace MoviesAPI.Controllers
 
                 if (criticReview != null)
                 {
-                    if (userSnapshot != null)
-                    {
-                        criticReview.User = userSnapshot;
+                    if (criticReview.IsPublished == true)
+                    { 
+                        if (userSnapshot != null)
+                        {
+                            criticReview.User = userSnapshot;
+                        }
+                        movieResult.CriticReviews.Add(criticReview);
                     }
-                    movieResult.CriticReviews.Add(criticReview);
+                    
                 }
 
                 return movieResult;
