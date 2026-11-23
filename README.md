@@ -12,3 +12,4 @@ This project is part of a larger Web Application Programming assignment focused 
 
 - RESTful endpoints for all movies, and movie by id
 - User account info stored with every review
+- Hides reviews that are not published
