@@ -10,7 +10,5 @@ This project is part of a larger Web Application Programming assignment focused 
 
 ## Features
 
-- RESTful endpoints for movies, genres and metadata
-- Create, read, update and delete reviews
-- User accounts and permissions
-- Secure authentication for protected routes
+- RESTful endpoints for all movies, and movie by id
+- User account info stored with every review
