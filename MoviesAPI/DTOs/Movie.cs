@@ -1,4 +1,6 @@
-﻿namespace MoviesAPI.DTOs
+﻿using System.Text.Json.Serialization;
+
+namespace MoviesAPI.DTOs
 {
     public class Movie
     {
@@ -12,7 +14,9 @@
         public DateTime ReleaseDate { get; set; }
         public Genre Genre { get; set; } = null!;
         public AudienceRating AudienceRating { get; set; } = null!;
-        public List<CriticReview> CriticReviews { get; set; } = new List<CriticReview>();
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public List<CriticReview> CriticReviews { get; set; } = null!;
 
 
 
